@@ -4,14 +4,13 @@ describe Bookmark do
 
   describe '.all' do
 
-    # it 'updates the #all class method' do
-    # connection = PG.connect(dbname: 'bookmark_manager')
-    # result = connection.exec('SELECT * FROM bookmarks')
-
-    # expect(bookmarks).to include("http://www.makersacademy.com")
-    # end
-
     it 'returns all the bookmarks' do
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.makersacademy.com');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
+
       bookmarks = Bookmark.all
 
       expect(bookmarks).to include("http://www.makersacademy.com")

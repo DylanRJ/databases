@@ -1,13 +1,9 @@
 feature 'adding a bookmark' do
   scenario 'submitting bookmark and seeing it displayed' do
-    # connection = PG.connect(dbname: 'bookmark_manager_test')
-
-    # connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.makersacademy.com');")
-    # connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
-    # connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
-
     visit('/add_bookmark')
-    fill_in('url_1', with: 'www.gov.org.uk')
-    expect(click_button('Submit'))
+    fill_in('url', with: 'www.gov.org.uk')
+    click_button('Submit')
+    
+    expect(page).to have_content 'www.gov.org.uk'
   end
 end

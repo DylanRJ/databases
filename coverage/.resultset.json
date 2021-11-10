@@ -28,23 +28,43 @@
           null
         ]
       },
-      "/Users/dylanjames/Projects/databases/spec/features/viewing_bookmarks_spec.rb": {
+      "/Users/dylanjames/Projects/databases/spec/features/add_bookmark_spec.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
           1,
           1,
           null,
           null
         ]
+      },
+      "/Users/dylanjames/Projects/databases/spec/features/viewing_bookmarks_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1636477995
+    "timestamp": 1636558667
   }
 }

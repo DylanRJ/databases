@@ -30,4 +30,12 @@ describe Bookmark do
       expect(bookmark.title).to eq 'Gov'
     end
   end
+
+  describe '.delete' do
+    it 'deletes an existing bookmark' do
+      bookmark = Bookmark.create(title: 'Gov', url:'www.gov.org.uk')
+      Bookmark.delete(id: bookmark.id)
+      expect(Bookmark.all.length).to eq 0
+    end
+  end
 end

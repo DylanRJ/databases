@@ -35,6 +35,14 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -63,6 +71,22 @@
           null
         ]
       },
+      "/Users/dylanjames/Projects/databases/spec/features/delete_bookmark_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/dylanjames/Projects/databases/spec/features/viewing_bookmarks_spec.rb": {
         "lines": [
           1,
@@ -80,6 +104,6 @@
         ]
       }
     },
-    "timestamp": 1636721916
+    "timestamp": 1636904713
   }
 }

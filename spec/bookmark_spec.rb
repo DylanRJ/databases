@@ -15,7 +15,6 @@ describe Bookmark do
       expect(bookmarks.first.id).to eq bookmark.id
       expect(bookmarks.first.title).to eq 'Makers'
       expect(bookmarks.first.url).to eq 'http://www.makersacademy.com'
-
     end
   end
 
@@ -36,6 +35,31 @@ describe Bookmark do
       bookmark = Bookmark.create(title: 'Gov', url:'www.gov.org.uk')
       Bookmark.delete(id: bookmark.id)
       expect(Bookmark.all.length).to eq 0
+    end
+  end
+
+  describe '.update' do
+    it 'updates an existing bookmark' do
+      bookmark = Bookmark.create(url: 'www.gov.org.uk', title: 'Gov')
+      updated_bookmark = Bookmark.update(id: bookmark.id, url: 'www.example.com', title: 'Example')
+
+      expect(updated_bookmark).to be_a Bookmark
+      expect(updated_bookmark.id).to eq bookmark.id
+      expect(updated_bookmark.title).to eq 'Example'
+      expect(updated_bookmark.url).to eq 'www.example.com'
+    end
+  end
+
+  describe '.find' do
+    it 'returns the request bookmark object' do
+      bookmark = Bookmark.create(title: 'Gov', url: 'www.gov.org.uk')
+
+      result = Bookmark.find(id: bookmark.id)
+
+      expect(result).to be_a Bookmark
+      expect(result.id).to eq bookmark.id
+      expect(result.title).to eq 'Gov'
+      expect(result.url).to eq 'www.gov.org.uk'
     end
   end
 end
